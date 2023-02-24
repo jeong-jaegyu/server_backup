@@ -13,8 +13,8 @@ tar -cf ${file_name}.tar $(cat important_files)
 echo "Finished tar..."
 
 echo "GZipping..."
-gzip -v9 ${file_name}.tar
-echo "GZip succesful..."
+lzma -v9 ${file_name}.tar
+echo "XZip succesful..."
 
 echo "Moving tar to backup dir"
-mv ${file_name}.tar.gz /srv/backups/minecraft/${server_name}/${file_name}.tar.gz
+mv ${file_name}.tar.xz /srv/backups/minecraft/${server_name}/${file_name}.tar.gx
